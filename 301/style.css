@@ -1,0 +1,71 @@
+/* General body and layout styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid #000;
+    overflow: hidden;
+    background-color: #dfe6e9;
+  }
+  
+  #score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .bubble, .stone {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .bubble {
+    background-color: rgba(0, 150, 255, 0.8);
+  }
+  
+  .stone {
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 10%; /* Stones will be a little less round */
+  }
+  
+  .bubble-blast {
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  .stone-blast {
+    transform: scale(0);
+    opacity: 0;
+  }
+  
