@@ -68,4 +68,24 @@ body {
     transform: scale(0);
     opacity: 0;
   }
+  #restart-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#restart-button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
   
