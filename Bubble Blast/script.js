@@ -108,6 +108,50 @@ function startGame() {
   // Gradually increase the speed of bubble creation
   setInterval(increaseSpeed, 10000); // Every 10 seconds
 }
+// DOM elements
+const restartButton = document.getElementById('restart-button');
 
-// Start the game when the page loads
-startGame();
+// Function to restart the game
+function restartGame() {
+  // Reset the game variables
+  score = 0;
+  scoreDisplay.textContent = `Score: ${score}`;
+  gameOver = false;
+  
+  // Hide the game over screen and restart button
+  gameOverDisplay.style.display = 'none';
+  restartButton.classList.add('hidden'); // Hide the restart button
+  
+  // Clear remaining intervals
+  clearInterval(bubbleInterval);
+  clearInterval(gameInterval);
+
+  // Clear the bubbles container
+  bubblesContainer.innerHTML = '';
+
+  // Restart the game
+  startGame();
+}
+
+// Event listener for the restart button
+restartButton.addEventListener('click', restartGame);
+
+// Update the endGame function to show the restart button
+function endGame(stone) {
+  stone.classList.add('stone-blast');
+  finalScore.textContent = score;
+  gameOver = true;
+
+  gameOverDisplay.style.display = 'block';  // Show game over message
+  restartButton.classList.remove('hidden'); // Show restart button
+
+  // Stop the game intervals
+  clearInterval(bubbleInterval);
+  clearInterval(gameInterval);
+
+  setTimeout(() => {
+    stone.remove();
+    bubblesContainer.innerHTML = ''; // Clear all bubbles and stones
+  }, 300); // Time for animation to complete
+}
+
