@@ -1,0 +1,143 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+#game-container {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid #000;
+    overflow: hidden;
+    background-color: #dfe6e9;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+#game-over {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+    display: none;
+    text-align: center;
+}
+
+#restart-btn {
+    position: relative; 
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #0177f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-btn:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.bubble, .stone {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.bubble {
+    background-color: rgba(0, 150, 255, 0.8);
+    animation: float 3s infinite ease-in-out alternate;
+}
+
+.stone {
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 10%;
+}
+
+.bubble-blast, .stone-blast {
+    transform: scale(0);
+    opacity: 0;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+@keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.8; } /* Bubble expands */
+    100% { transform: scale(2); opacity: 0; } /* Bubble bursts */
+}
+@keyframes break {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100px) rotate(180deg); opacity: 0; }
+}
+
+.stone-blast {
+    animation: break 0.3s ease-out forwards;
+}
+
+.stone-piece {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 3px;
+    opacity: 1;
+    animation: fall 0.6s ease-out forwards;
+}
+
+.bubble-blast {
+    animation: pop 0.3s ease-out forwards;
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
