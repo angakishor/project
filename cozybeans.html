@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Beans - Coffee & Tea</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8dcd2;
+      color: #3e2723;
+    }
+
+    header {
+      background-color: #5d4037;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    header .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #d7ccc8;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background-color: #d3b8a3;
+      margin-top: 10px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-category {
+      margin-bottom: 40px;
+    }
+
+    .menu-category h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #4e342e;
+    }
+
+    .menu-item-container {
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 700px;
+      background-color: #f2e5dc;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-right: 15px;
+    }
+
+    .menu-item-info {
+      flex: 1;
+    }
+
+    .menu-item-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .menu-item-price {
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #5d4037;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://www.freepnglogos.com/uploads/coffee-logo-png/estella-revenge-stuff-week-coffee-confections-1.png" alt="Coffee Cup Logo" />
+      Cozy Beans
+    </div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Cozy Beans</h1>
+    <p>Your favorite corner for coffee, tea, and warm conversations.</p>
+  </section>
+
+  <section class="section" id="menu">
+    <h2>Our Menu</h2>
+
+    <!-- Coffee Section -->
+    <div class="menu-category">
+      <h3>Coffee</h3>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/626194218/photo/latte-coffee-art.jpg?s=612x612&w=0&k=20&c=nZQTsM7XUfxNF3Wnnn2iyZ5plm9HJd10ZhsUQjdAWNk=" alt="Espresso">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Espresso</div>
+            <div class="menu-item-price">$3.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/2165843056/photo/cappuccino.webp?a=1&b=1&s=612x612&w=0&k=20&c=_4s2-g4wFVSSdNMgbrYChdQkWKCtVJjYVpOVfpD2E2A=" alt="Cappuccino">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Cappuccino</div>
+            <div class="menu-item-price">$3.50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/2168005130/photo/heart-shaped-latte-art-in-a-white-cup-with-coffee-beans-isolated-on-wooden-table-side-view-of.jpg?s=612x612&w=0&k=20&c=hQmWzRmUpVsrEVD97Dwy7jxk6FmRJhKbA2VNh_D5V9s=" alt="Latte">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Latte</div>
+            <div class="menu-item-price">$4.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/1190085255/photo/mug-of-mocha-with-caffe-froth-art.jpg?s=2048x2048&w=is&k=20&c=5cnRvw-O8cGWBB-JQLL9YbD8Dlq9W5IVhTz9oG2T1DE=" alt="Mocha">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Mocha</div>
+            <div class="menu-item-price">$4.25</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tea Section -->
+    <div class="menu-category">
+      <h3>Tea</h3>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/2155685813/photo/green-tea-with-lemon.jpg?s=612x612&w=0&k=20&c=yFdYpQxWNCcLw4ZO4l_PA67eWMxPdgeXv3XtvJvFbRg=" alt="Green Tea">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Green Tea</div>
+            <div class="menu-item-price">$2.50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/544570554/photo/coffee-latte-barista-special.jpg?s=612x612&w=0&k=20&c=QvU6fVXmLu_hA8I5GpKTJJEP3HdEfhfEeTiWEnM0kdI=" alt="Chai Latte">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Chai Latte</div>
+            <div class="menu-item-price">$3.75</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/1439793875/photo/black-tea-served-in-mug-isolated-on-table-side-view-of-taiwan-food.jpg?s=612x612&w=0&k=20&c=ftQswDXdB0lfGC9hToY20yKSK2_VihDnkQziKJY_rk8=" alt="Black Tea">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Black Tea</div>
+            <div class="menu-item-price">$2.75</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snacks Section -->
+    <div class="menu-category">
+      <h3>Snacks</h3>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/157615724/photo/slightly-overdone-chocolate-chip-cookies-in-a-messy-pile.jpg?s=612x612&w=0&k=20&c=kqcH5XDIwNhwAyfGhuhHzmei9WPhGo4mHFwZLruJhbA=" alt="Cookies">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Chocolate Chip Cookies</div>
+            <div class="menu-item-price">$1.50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item-container">
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/999216336/photo/freshly-baked-cinnamon-cookies-snickerdoodle-cookies-on-bright-background.jpg?s=612x612&w=0&k=20&c=VYrIr0_Q2Cd3-Ta_CbYvpMltXhJA6OLygJttaWdYFJM=" alt="Biscuits">
+          <div class="menu-item-info">
+            <div class="menu-item-title">Butter Biscuits</div>
+            <div class="menu-item-price">$1.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center;">
+      Cozy Beans was born from a love of warm cups and friendly chats. We serve handpicked teas and freshly brewed coffees in a rustic, relaxing atmosphere.
+    </p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center;">
+      Visit us at 123 Brew Lane, Mocha Town<br />
+      Call us: (123) 456-7890<br />
+      Email: contact@cozybeans.com
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Cozy Beans. All rights reserved.
+  </footer>
+</body>
+</html>
